@@ -17,6 +17,7 @@ function draw()
         fillrect((i - 1) * 16, (32 - score[i] - 1) * 4, 16-1,4)
     end
     
+    
     color(0,255,0)
     drawrect((playCursor - 1)*16, 0, 16, 128)
 
@@ -46,28 +47,28 @@ function loop()
           tone(0, score[playCursor]*10 + 440, 0)
         end
     end
-    if btn(1) >= 3 then
+    if btn(1) == 3 then
         if cursor == 1 then
             cursor = 8
         else
             cursor = cursor - 1
         end
     end
-    if btn(2) >= 3 then
+    if btn(2) == 3 then
         if cursor == 8 then
             cursor = 1
         else
             cursor = cursor + 1
         end
     end
-    if btn(3) >= 2 then
+    if btn(3) == 2 then
         score[cursor] = score[cursor] + 1
     end
-    if btn(4) >= 2 then
+    if btn(4) == 2 then
         score[cursor] = score[cursor] - 1
     end
     
-    if btn(7) >= 2 then
+    if btn(7) == 2 then
         score[cursor] = 0
     end
 end
