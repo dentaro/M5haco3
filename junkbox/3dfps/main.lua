@@ -75,7 +75,6 @@ function _init()
 end
 
 function input()
-  --wifiserve("ap")
   x = tp(0)
   y = tp(1)
 
